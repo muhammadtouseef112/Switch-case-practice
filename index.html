@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+        #input-1{
+            width: 200px;
+            margin: auto;
+            border: 2px solid black;
+        }
+        h2{
+            text-align: center;
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+        .input{
+            text-align: center;
+        }
+    </style>
+  
+    <div class="input">
+        <h2>Switch case with city zip codes for pakistan</h2>
+    <h2>
+    Enter your Zip code:
+</h2>
+    <br />
+    <input type="email" id="input-1" size="20" onblur="fullcity(),this.style.backgroundColor='white';" onfocus="this.style.backgroundColor='yellow';"
+    />
+    <br />
+    <br>
+    <br>
+    <input type="text" disabled id="city" />
+</div>
+    <script>
+      function fullcity() {
+        var cityname;
+        var cityzip = document.getElementById("input-1").value;
+        switch (cityzip) {
+          case "12345":
+            cityname = "karachi";
+            break;
+          case "246810":
+            cityname = "Lahore";
+            break;
+          case "13579":
+            cityname = "Punjab";
+            break;
+          case "56789":
+            cityname = "K.P.K";
+            break;
+          default:
+            alert("please enter valid zip")
+        }
+        document.getElementById("city").value = cityname;
+      }
+    </script>
+  </body>
+</html>
